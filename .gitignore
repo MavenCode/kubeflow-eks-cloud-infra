@@ -1,0 +1,4 @@
+/export.sh
+.DS_Store
+.terraform
+*.tfstate.*
