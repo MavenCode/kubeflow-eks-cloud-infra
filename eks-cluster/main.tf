@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "label" {
-  source     = "../modules/label"
+  source     = "./modules/label"
   namespace  = var.namespace
   name       = var.name
   stage      = var.stage
@@ -27,7 +27,7 @@ locals {
 }
 
 module "vpc" {
-  source     = "../modules/vpc"
+  source     = "./modules/vpc"
   namespace  = var.namespace
   stage      = var.stage
   name       = var.name
@@ -37,7 +37,7 @@ module "vpc" {
 }
 
 module "subnets" {
-  source               = "../modules/subnet"
+  source               = "./modules/subnet"
   availability_zones   = var.availability_zones
   namespace            = var.namespace
   stage                = var.stage
@@ -52,7 +52,7 @@ module "subnets" {
 }
 
 module "eks_workers" {
-  source                             = "../modules/eks-workers"
+  source                             = "./modules/eks-workers"
   namespace                          = var.namespace
   stage                              = var.stage
   name                               = var.name
@@ -79,7 +79,7 @@ module "eks_workers" {
 }
 
 module "eks_cluster" {
-  source                 = "../modules/eks-cluster"
+  source                 = "./modules/eks-cluster"
   namespace              = var.namespace
   stage                  = var.stage
   cluster_name           = var.name
