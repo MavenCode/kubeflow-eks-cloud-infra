@@ -2,6 +2,8 @@
 .DS_Store
 .terraform
 *.tfstate.*
+*.tfstate
 .idea
+.idea/*
 /eks-cluster/linux.amd64.tar.gz
 /eks-cluster/kubectl-smlogs.linux.amd64/kubectl-smlogs
