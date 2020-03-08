@@ -8,7 +8,7 @@ data:
     - "groups":
       - "system:bootstrappers"
       - "system:nodes"
-      "rolearn": "arn:aws:iam::000654207548:role/eg-test-eks-workers"
+      "rolearn": "arn:aws:iam::000654207548:role/sagemaker-kubeflow-test-eks-kfsgm-cluster-workers"
       "username": "system:node:{{EC2PrivateDNSName}}"
 
 
