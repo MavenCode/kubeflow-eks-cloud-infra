@@ -9,17 +9,14 @@
 
 2. Connecting to the EKS Cluster:
    - Get the Cluster Identity Info -> `aws sts get-caller-identity --profile prod-eks`  
-   - Assume Role -> 
-   `aws sts assume-role \
-   --role-arn "arn:aws:eks:us-east-2:000654207548:cluster/AWSIAMeks-demo-cluster" \
-   --role-session-name \
-   eks-access-session`
    - Get Kubeconfig Update -> 
-      `aws --profile prod-maven \
-        --region us-east-2 \
-        eks update-kubeconfig \
-        --name eks-kfsgm-cluster \
-        --role-arn arn:aws:iam::000654207548:user/prod-maven`
+      ```
+        aws --profile prod-maven \
+            --region us-east-2 \
+            eks update-kubeconfig \
+            --name eks-kfsgm-cluster \
+            --role-arn arn:aws:iam::000654207548:user/prod-maven
+      ```
         
 3. Create new IAM role that can be assumed by the cluster service
         `aws iam create-role \
